@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Cloth – Futuristic Creative & Consulting</title>
+  <meta name="description" content="The Cloth Consulting Firm: Websites, branding, AI video ads, theme songs & jingles, social growth, SEO, automation and affiliate programs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          keyframes: {
+            floaty: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-6px)' } },
+            shimmer: {'0%': {backgroundPosition:'0% 50%'}, '100%': {backgroundPosition:'100% 50%'}}
+          },
+          animation: { floaty: 'floaty 6s ease-in-out infinite' }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Subtle grid & glow background */
+    .bg-space {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 35%),
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,0.05), transparent 45%),
+        radial-gradient(circle at 40% 90%, rgba(255,255,255,0.04), transparent 40%),
+        #07080c;
+    }
+    .glass { backdrop-filter: blur(12px); background: rgba(255,255,255,0.06); }
+    .ring-faint { box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset; }
+    .gradient-title {
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.7) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .soft-gradient {
+      background-image: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(34,211,238,0.22));
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-space text-white antialiased selection:bg-white/20 selection:text-white">
+  <!-- Ambient blobs -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-indigo-500/20 via-fuchsia-500/10 to-cyan-400/20 blur-3xl"></div>
+    <div class="absolute bottom-[-12rem] right-[-8rem] h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-cyan-400/10 via-emerald-400/10 to-indigo-500/10 blur-2xl"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-black/30 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="#" class="group inline-flex items-center gap-2">
+        <span class="relative rounded-xl bg-black/60 ring-faint px-3 py-1 text-sm tracking-widest">THE CLOTH</span>
+        <i data-lucide="sparkles" class="w-4 h-4 opacity-60 group-hover:opacity-100 transition"></i>
+      </a>
+      <nav class="hidden gap-8 md:flex">
+        <a href="#services" class="text-sm opacity-80 hover:opacity-100">Services</a>
+        <a href="#work" class="text-sm opacity-80 hover:opacity-100">Work</a>
+        <a href="#about" class="text-sm opacity-80 hover:opacity-100">About</a>
+      </nav>
+      <a href="#consult" class="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm backdrop-blur transition hover:border-white/40 hover:bg-white/10">
+        Request Consultation <i data-lucide="arrow-right" class="w-4 h-4 transition group-hover:translate-x-0.5"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative mx-auto max-w-7xl px-6 pt-14 sm:pt-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest text-white/80">
+        Futuristic • Mysterious • Professional
+      </p>
+      <h1 class="text-balance gradient-title text-4xl font-semibold leading-tight sm:text-6xl">
+        We build the brands that build the future.
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-pretty text-white/70">
+        Websites. Branding. AI video ads. Theme songs &amp; jingles. Social growth. Affiliate engines. Business setup.
+        The Cloth merges human imagination with artificial intelligence to craft unforgettable, revenue‑driven experiences.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href="#consult" class="rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400 px-6 py-3 text-sm font-semibold text-black shadow-2xl shadow-cyan-500/20 transition hover:opacity-95">Start Your Project</a>
+        <a href="#services" class="rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm text-white/90 backdrop-blur transition hover:border-white/30 hover:bg-white/10">Explore Services</a>
+      </div>
+    </div>
+
+    <!-- Hero cards -->
+    <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Card template -->
+      <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5 animate-floaty">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
+          <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-sm font-semibold">AI Strategy &amp; Automation</h3>
+        <p class="mt-1 text-sm text-white/70">Integrate chatbots, content workflows, and smart tooling to scale ops.</p>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
+          <i data-lucide="rocket" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-sm font-semibold">Brand &amp; Launch Systems</h3>
+        <p class="mt-1 text-sm text-white/70">Go‑to‑market playbooks, funnels, and conversion‑focused sites.</p>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
+          <i data-lucide="video" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-sm font-semibold">AI Video Ads</h3>
+        <p class="mt-1 text-sm text-white/70">Cinematic spots, product explainers, and social‑first edits.</p>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5">
+        <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
+          <i data-lucide="music-2" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-sm font-semibold">Theme Songs &amp; Jingles</h3>
+        <p class="mt-1 text-sm text-white/70">Custom AI music, voiceovers, and sonic branding.</p>
+      </div>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="mt-12">
+      <p class="mb-3 text-center text-xs uppercase tracking-widest text-white/60">Trusted by founders, shops, and creators</p>
+      <div class="mx-auto grid max-w-3xl grid-cols-2 gap-3 text-center text-xs text-white/50 sm:grid-cols-4">
+        <div class="rounded-xl ring-faint glass px-3 py-2">Startup</div>
+        <div class="rounded-xl ring-faint glass px-3 py-2">E‑commerce</div>
+        <div class="rounded-xl ring-faint glass px-3 py-2">Local Service</div>
+        <div class="rounded-xl ring-faint glass px-3 py-2">Creator</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="relative mx-auto max-w-7xl px-6 py-20">
+    <div class="mx-auto mb-10 max-w-2xl text-center">
+      <h2 class="text-3xl font-semibold sm:text-4xl">Full‑Stack Creative &amp; Consulting</h2>
+      <p class="mt-2 text-white/70">Everything your brand needs, engineered for impact.</p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- 8 service tiles -->
+      <template id="service-template">
+        <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
+            <i class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-sm font-semibold"></h3>
+          <p class="mt-1 text-sm text-white/70"></p>
+          <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-white/5 blur-xl"></div>
+        </div>
+      </template>
+      <div id="services-grid" class="contents"></div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="relative mx-auto max-w-7xl px-6 py-20">
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-semibold sm:text-4xl">Selected Work</h2>
+      <p class="mt-2 text-white/70">Three quick snapshots of results we deliver.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Case study cards -->
+      <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5">
+        <div class="aspect-[16/10] rounded-xl soft-gradient"></div>
+        <div class="mt-3">
+          <p class="text-sm font-medium">DTC Launch System</p>
+          <span class="text-xs text-white/60">E‑commerce • Website + Ads</span>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-white/75">
+            <li>+142% revenue in 90 days</li>
+            <li>3.1x ROAS on meta</li>
+            <li>AI video ads + funnel</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5">
+        <div class="aspect-[16/10] rounded-xl soft-gradient"></div>
+        <div class="mt-3">
+          <p class="text-sm font-medium">Creator Brand Engine</p>
+          <span class="text-xs text-white/60">Creator • Branding + Jingle</span>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-white/75">
+            <li>Custom theme song + sonic logo</li>
+            <li>+68% watch time</li>
+            <li>TikTok growth automation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl ring-faint glass p-5">
+        <div class="aspect-[16/10] rounded-xl soft-gradient"></div>
+        <div class="mt-3">
+          <p class="text-sm font-medium">Local Service Domination</p>
+          <span class="text-xs text-white/60">Local Biz • SEO + Automations</span>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-white/75">
+            <li>Top‑3 map pack in 6 weeks</li>
+            <li>24/7 AI lead intake bot</li>
+            <li>39% booking rate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="relative mx-auto max-w-7xl px-6 py-20">
+    <div class="mx-auto mb-10 max-w-2xl text-center">
+      <h2 class="text-3xl font-semibold sm:text-4xl">Clients Say</h2>
+      <p class="mt-2 text-white/70">Social proof that reduces risk and builds trust.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-2xl ring-faint glass p-5">
+        <p class="text-sm text-white/80">“They rebuilt our brand, ads, and site—Q2 became our best quarter ever.”</p>
+        <div class="mt-3 text-xs text-white/60">R. Lewis • Founder, DTC Apparel</div>
+      </div>
+      <div class="rounded-2xl ring-faint glass p-5">
+        <p class="text-sm text-white/80">“The AI jingle + video ads lifted our watch time and conversions instantly.”</p>
+        <div class="mt-3 text-xs text-white/60">M. Ortiz • Creator/Coach</div>
+      </div>
+      <div class="rounded-2xl ring-faint glass p-5">
+        <p class="text-sm text-white/80">“Automation cut response time to minutes and bookings jumped 39%.”</p>
+        <div class="mt-3 text-xs text-white/60">A. Chen • Owner, Local Studio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="relative mx-auto max-w-7xl px-6 py-20">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-semibold sm:text-4xl">Built for Visionaries</h2>
+      <p class="mt-3 text-white/70">
+        The Cloth Consulting Firm merges strategy, design, and artificial intelligence to craft unforgettable, revenue‑driven brands.
+        We’re your shadow team—quietly powerful, radically effective, and relentlessly focused on outcomes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Consultation Form -->
+  <section id="consult" class="relative mx-auto max-w-5xl px-6 pb-24">
+    <div class="mx-auto max-w-2xl pb-8 text-center">
+      <h2 class="text-3xl font-semibold sm:text-4xl">Request a Consultation</h2>
+      <p class="mt-2 text-white/70">Tell us about your vision. We’ll bring the blueprint.</p>
+    </div>
+
+    <form id="consult-form" class="rounded-2xl ring-faint glass p-6">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label class="mb-1 block text-sm text-white/80">Name</label>
+          <input name="name" required class="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-white/30" placeholder="Jordan Carter" />
+        </div>
+        <div>
+          <label class="mb-1 block text-sm text-white/80">Email</label>
+          <input type="email" name="email" required class="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-white/30" placeholder="you@brand.com" />
+        </div>
+        <div>
+          <label class="mb-1 block text-sm text-white/80">Business / Brand</label>
+          <input name="company" class="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-white/30" placeholder="The Black Cloth" />
+        </div>
+        <div>
+          <label class="mb-1 block text-sm text-white/80">Estimated Budget</label>
+          <select name="budget" class="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-white/30">
+            <option value="Undecided">Undecided</option>
+            <option value="$2k-$5k">$2k–$5k</option>
+            <option value="$5k-$15k">$5k–$15k</option>
+            <option value="$15k-$50k">$15k–$50k</option>
+            <option value="$50k+">$50k+</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="mb-1 block text-sm text-white/80">What do you need? (select all that apply)</label>
+          <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
+            <!-- service chips -->
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="Website" class="accent-white"><span>Website</span></label>
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="Brand/Logo" class="accent-white"><span>Brand/Logo</span></label>
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="AI Video Ad" class="accent-white"><span>AI Video Ad</span></label>
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="AI Music/Jingle" class="accent-white"><span>AI Music/Jingle</span></label>
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="Social Ads" class="accent-white"><span>Social Ads</span></label>
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="Affiliate Program" class="accent-white"><span>Affiliate Program</span></label>
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="SEO" class="accent-white"><span>SEO</span></label>
+            <label class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm"><input type="checkbox" name="services" value="Automation/Chatbot" class="accent-white"><span>Automation/Chatbot</span></label>
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="mb-1 block text-sm text-white/80">Project Goals / Notes</label>
+          <textarea name="message" rows="5" class="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-sm outline-none focus:border-white/30" placeholder="Tell us about your project, timeline, KPIs, and anything else we should know."></textarea>
+        </div>
+      </div>
+
+      <!-- Trust & CTA row -->
+      <div class="mt-6 grid gap-4">
+        <div class="grid gap-3 sm:grid-cols-3">
+          <div class="rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-3 text-sm">NDA available on request</div>
+          <div class="rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-3 text-sm">Secure intake • Privacy‑first</div>
+          <div class="rounded-xl border border-indigo-400/30 bg-indigo-500/10 p-3 text-sm">Avg response time &lt; 24h</div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <p class="text-xs text-white/60">By submitting, you agree to our terms and privacy policy.</p>
+          <button type="submit" class="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-tr from-fuchsia-500 to-cyan-400 px-5 py-2.5 text-sm font-semibold text-black shadow-2xl shadow-fuchsia-500/20 transition hover:opacity-95">
+            Request Consultation
+            <i data-lucide="arrow-right" class="w-4 h-4 transition group-hover:translate-x-0.5"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="status" class="hidden mt-4 rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-3 text-emerald-300"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-black/40">
+    <div class="mx-auto max-w-7xl px-6 py-10">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <p class="text-sm text-white/60">© <span id="year"></span> The Cloth Consulting Firm. All rights reserved.</p>
+        <div class="flex gap-4 text-sm text-white/70">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+          <a href="#consult" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page script: icons, services, form -->
+  <script>
+    // Icons
+    lucide.createIcons();
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Services data -> tiles (no framework needed)
+    const services = [
+      { icon: 'brain-circuit', title: 'AI Strategy & Automation', desc: 'Integrate chatbots, content workflows, and smart tooling to scale ops.' },
+      { icon: 'rocket', title: 'Brand & Launch Systems', desc: 'Go-to-market playbooks, funnels, and conversion-focused sites.' },
+      { icon: 'video', title: 'AI Video Ads', desc: 'Cinematic spots, product explainers, and social-first edits.' },
+      { icon: 'music-2', title: 'Theme Songs & Jingles', desc: 'Custom AI music, voiceovers, and sonic branding.' },
+      { icon: 'globe-2', title: 'Web Design + SEO', desc: 'Futuristic UX, lightning-fast builds, and discoverability baked in.' },
+      { icon: 'megaphone', title: 'Social Growth & Ads', desc: 'Paid and organic campaigns engineered for ROI.' },
+      { icon: 'bot', title: 'Affiliate Programs', desc: 'Recruit, manage, and scale partners with automation.' },
+      { icon: 'shield-check', title: 'Business Setup', desc: 'LLC/EIN, brand identity, and investor-ready materials.' },
+    ];
+    const grid = document.getElementById('services-grid');
+    const tpl = document.getElementById('service-template');
+    services.forEach(s => {
+      const node = tpl.content.cloneNode(true);
+      node.querySelector('i').setAttribute('data-lucide', s.icon);
+      node.querySelector('h3').textContent = s.title;
+      node.querySelector('p').textContent = s.desc;
+      grid.appendChild(node);
+    });
+    lucide.createIcons(); // render newly added icons
+
+    // Fake submit (shows thank-you without backend)
+    document.getElementById('consult-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = new FormData(e.currentTarget);
+      const name = (data.get('name') || '').toString().trim() || 'friend';
+      const status = document.getElementById('status');
+      status.textContent = `Thank you, ${name}! We'll reach out within 24 hours.`;
+      status.classList.remove('hidden');
+      e.currentTarget.reset();
+      setTimeout(() => status.classList.add('hidden'), 6000);
+    });
+  </script>
+</body>
+</html>
